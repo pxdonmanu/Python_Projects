@@ -1,5 +1,6 @@
 import tkinter as tk
-from tkinter import ttk
+# from tkinter import ttk
+import ttkbootstrap as ttk
 
 # Function for the operations
 def add():
@@ -35,7 +36,7 @@ def div():
   output_string.set(sub_num)
 
 # Window 
-window=tk.Tk()
+window=ttk.Window(themename='darkly')
 window.title('Basic Calculator')
 window.geometry('350x250')
 
@@ -64,10 +65,10 @@ btn_multiply=ttk.Button(master=buttons_frame, text='*', command=mult)
 btn_divide=ttk.Button(master=buttons_frame, text='/', command=div)
 
 buttons_frame.pack(pady=30)
-btn_add.pack(side='left')
-btn_subtract.pack(side='left')
-btn_multiply.pack(side='left')
-btn_divide.pack(side='left')
+btn_add.pack(side='left', padx=5)
+btn_subtract.pack(side='left', padx=5)
+btn_multiply.pack(side='left', padx=5)
+btn_divide.pack(side='left', padx=5)
 
 # Output
 output_string=tk.StringVar()
